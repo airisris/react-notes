@@ -64,10 +64,11 @@ function HomePage() {
         </Box>
         <Box>
           <FormControl sx={{ minWidth: "160px", pr: "10px" }} size="small">
-            <InputLabel id="demo-select-small-label">Category</InputLabel>
+            <InputLabel id="demo-simple-select-label">Category</InputLabel>
             <Select
-              labelId="demo-select-small-label"
-              id="demo-select-small"
+              defaultValue={10}
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
               label="Age"
             >
               <MenuItem selected value={10}>
@@ -81,6 +82,7 @@ function HomePage() {
           <FormControl sx={{ width: "160px" }} size="small">
             <InputLabel id="demo-select-small-label">Sort By</InputLabel>
             <Select
+            defaultValue={10}
               labelId="demo-select-small-label"
               id="demo-select-small"
               label="Age"
@@ -106,7 +108,11 @@ function HomePage() {
           <Card>{card}</Card>
         </Box>
       </Box>
-      <Fab color="primary" aria-label="add" sx={{ position: "fixed", bottom: "20px", right: "20px" }}>
+      <Fab
+        color="primary"
+        aria-label="add"
+        sx={{ position: "fixed", bottom: "20px", right: "20px" }}
+      >
         <AddIcon />
       </Fab>
     </Container>
