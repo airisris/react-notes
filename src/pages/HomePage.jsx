@@ -1,13 +1,10 @@
 import * as React from "react";
-import { useState } from "react";
-import { Link as RouterLink } from "react-router";
-import { Paper, TextField, Typography, Box, Button } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import Container from "@mui/material/Container";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Editor from "react-simple-wysiwyg";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -18,34 +15,6 @@ import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 
 function HomePage() {
-  // card
-  const card = (
-    <React.Fragment>
-      <CardContent>
-        <Typography variant="h6" component="div">
-          Note 1
-        </Typography>
-        <Chip size="small" label="Idea" sx={{ my: "13px" }} />
-        <Typography
-          component="div"
-          variant="caption"
-          sx={{ color: "text.secondary" }}
-        >
-          Jul 21, 2025 9:43 AM
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">
-          <CreateIcon sx={{ width: "20px" }} /> Edit
-        </Button>
-        <Button size="small" color="error">
-          <DeleteIcon sx={{ width: "20px" }} />
-          Delete
-        </Button>
-      </CardActions>
-    </React.Fragment>
-  );
-
   return (
     <Container
       maxWidth="md"
@@ -82,7 +51,7 @@ function HomePage() {
           <FormControl sx={{ width: "160px" }} size="small">
             <InputLabel id="demo-select-small-label">Sort By</InputLabel>
             <Select
-            defaultValue={10}
+              defaultValue={10}
               labelId="demo-select-small-label"
               id="demo-select-small"
               label="Age"
@@ -102,10 +71,60 @@ function HomePage() {
         }}
       >
         <Box sx={{ maxWidth: "170px" }}>
-          <Card>{card}</Card>
+          <Card>
+            <React.Fragment>
+              <CardContent>
+                <Typography variant="h6" component="div">
+                  Note 1
+                </Typography>
+                <Chip size="small" label="Idea" sx={{ my: "13px" }} />
+                <Typography
+                  component="div"
+                  variant="caption"
+                  sx={{ color: "text.secondary" }}
+                >
+                  Jul 21, 2025 9:43 AM
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">
+                  <CreateIcon sx={{ width: "20px" }} /> Edit
+                </Button>
+                <Button size="small" color="error">
+                  <DeleteIcon sx={{ width: "20px" }} />
+                  Delete
+                </Button>
+              </CardActions>
+            </React.Fragment>
+          </Card>
         </Box>
         <Box sx={{ maxWidth: "170px" }}>
-          <Card>{card}</Card>
+          <Card>
+            <React.Fragment>
+              <CardContent>
+                <Typography variant="h6" component="div">
+                  Note 1
+                </Typography>
+                <Chip size="small" label="Idea" sx={{ my: "13px" }} />
+                <Typography
+                  component="div"
+                  variant="caption"
+                  sx={{ color: "text.secondary" }}
+                >
+                  Jul 21, 2025 9:43 AM
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">
+                  <CreateIcon sx={{ width: "20px" }} /> Edit
+                </Button>
+                <Button size="small" color="error">
+                  <DeleteIcon sx={{ width: "20px" }} />
+                  Delete
+                </Button>
+              </CardActions>
+            </React.Fragment>
+          </Card>
         </Box>
       </Box>
       <Fab

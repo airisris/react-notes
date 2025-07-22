@@ -1,27 +1,13 @@
-import { useState } from "react";
-import { Link as RouterLink } from "react-router";
 import { Paper, TextField, Typography, Box, Button } from "@mui/material";
 import Container from "@mui/material/Container";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import Editor from "react-simple-wysiwyg";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
-import CreateIcon from '@mui/icons-material/Create';
-import DeleteIcon from '@mui/icons-material/Delete';
+import CreateIcon from "@mui/icons-material/Create";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 function CategoriesPage() {
-  const style = {
-    py: "10px",
-    width: "100%",
-    borderColor: "divider",
-    backgroundColor: "background.paper",
-  };
-
   return (
     <Container
       maxWidth="md"
@@ -51,11 +37,18 @@ function CategoriesPage() {
       </Paper>
       <Paper elevation={3} sx={{ p: "20px", mt: "20px" }}>
         <Typography variant="h6">Existing Categories (3)</Typography>
-        <List sx={style}>
+        <List
+          sx={{
+            py: "10px",
+            width: "100%",
+            borderColor: "divider",
+            backgroundColor: "background.paper",
+          }}
+        >
           <ListItem>
-            <ListItemText primary="Personal" /> 
+            <ListItemText primary="Personal" />
             <Button color="light">
-              <CreateIcon /> 
+              <CreateIcon />
             </Button>
             <Button color="light">
               <DeleteIcon />
@@ -64,8 +57,8 @@ function CategoriesPage() {
           <Divider component="li" />
           <ListItem>
             <ListItemText primary="Work" />
-             <Button color="light">
-              <CreateIcon /> 
+            <Button color="light">
+              <CreateIcon />
             </Button>
             <Button disabled color="light">
               <DeleteIcon />
@@ -74,8 +67,8 @@ function CategoriesPage() {
           <Divider component="li" />
           <ListItem>
             <ListItemText primary="Idea" />
-             <Button color="light">
-              <CreateIcon /> 
+            <Button color="light">
+              <CreateIcon />
             </Button>
             <Button disabled color="light">
               <DeleteIcon />
